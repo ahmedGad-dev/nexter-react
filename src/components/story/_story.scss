@@ -1,0 +1,54 @@
+@import "../../sass/_variables.scss";
+@import "../../sass/_main.scss";
+
+.story{
+    grid-column: full-start / full-end;  
+    display: grid;
+    grid-template-columns: 50vw;
+
+    &__pictures {
+      display: grid;
+      background-color: $color-primary;
+   //   grid-column: full-start / col-end 3;        
+      background-image: linear-gradient(rgba($color-primary, .5), rgba($color-primary, .5)), url(../../assets/img/back.jpg);
+      background-size: cover; 
+      background-position: center;   
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 1fr);       
+  }
+
+    &__img--1 {
+      grid-row: 2/ span 4 ;
+      grid-column: 2 / span 4 ;
+      display: block;
+      box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 1.0);
+    }
+  
+    &__img--2 {
+      transform: translateX(20%);
+      grid-row: 4 / span 3;
+      grid-column: 4 / span 3;
+      z-index: 20;
+    }
+
+    &__content {
+      display: grid;
+      background-color: $color-grey-light-1;
+      grid-column: col-start 7 / full-end;
+      padding: 6rem 12rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      & button {
+        justify-self: start;
+      }
+    }
+
+   &__text {
+     font-size: 1.5rem ;
+     font-style: italic ;
+     margin-bottom: 4rem;
+   }
+}

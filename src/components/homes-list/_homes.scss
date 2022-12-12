@@ -1,0 +1,9 @@
+@import '../../sass/_variables.scss';
+
+.homes{   
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));   
+    margin-top: 200px;
+    grid-gap: 7rem;
+}

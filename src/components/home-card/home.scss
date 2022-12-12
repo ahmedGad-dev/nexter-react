@@ -1,0 +1,78 @@
+@import '../../sass/variables';
+
+
+.home{
+    display: grid;
+    background-color: $color-grey-light-1;
+    grid-template-columns: repeat(2, 1fr);   
+    position: relative;
+    grid-row-gap: 3.5rem;
+
+    &__img {
+        width: 100%;
+        grid-row: 1 / 2 ; 
+        grid-column: 1 / -1;
+        z-index: 1;
+        object-fit: cover;
+    }
+
+    &__like {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+        fill: $color-primary;
+        height: 2.5rem;
+        width: 2.5rem ;
+        z-index: 10;
+        justify-self: end;
+    } 
+
+    &__location,
+    &__rooms {
+      margin-top: 2.5rem ;
+    }
+
+    &__location,
+    &__rooms,
+    &__area,
+    &__price {
+      font-size: 1.5rem;
+      margin-left: 2rem;
+      display: flex;
+      align-items: center;
+        svg {
+            fill: $color-primary;
+            height: 2.5rem;
+            width: 2rem ;
+            margin-right: 1rem;
+         }
+        p {
+            
+      }
+    }
+
+    &__name{   
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+        font-family: $font-display;
+        justify-self: center;
+        align-self: end;
+        width: 80%;
+        text-align: center;
+        font-size: 1.6rem;
+        padding: 1.25rem;
+        background-color: $color-secondary;
+        color: white;
+        font-weight: 400;
+        z-index: 5;
+        transform: translateY(50%);
+    }
+
+
+    &__btn{
+        fill: $color-primary;   
+        grid-column: 1 / -1;
+    }
+
+
+
+}
